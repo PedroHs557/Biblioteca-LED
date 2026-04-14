@@ -3,16 +3,14 @@
 
 #include <Arduino.h>
 
-
-/** 
+/**
  * @class Led
  * @brief Classe para controle não bloqueante de um LED.
  * Permite ligar, desligar, ligar por tempo determinado,
  * piscar continuamente e piscar por quantidade definida.
  *
  * @note O método update() deve ser chamado continuamente dentro do loop().
-*/
-
+ */
 
 class Led
 {
@@ -37,12 +35,12 @@ private:
      */
     void funcaoDesligamento();
 
-public:
-/**
- * @brief constrói um objeto led
- * @param pino o número do pino onde o led está conectado.
- */
-    Led(uint8_t pino); 
+    public:
+    /**
+     * @brief constrói um objeto led
+     * @param pino o número do pino onde o led está conectado.
+     */
+    Led(uint8_t pino);
 
     /**
      * @brief liga o led continuamente.
@@ -78,9 +76,22 @@ public:
      */
     void piscar(float frequencia, uint16_t repeticoes);
 
+    /**
+     * @brief retorna o estado atual do LED (true para ligado, false para desligado).
+     * @return estado do LED
+     */
     bool getEstado();
+
+    /**
+     * @brief retorna o número do pino onde o led está conectado.
+     * @return número do pino
+     */
     uint8_t getPino();
 
+    /**
+     * @brief define o estado do LED.
+     * @param estado novo estado do LED (true para ligado, false para desligado).
+     */
     void setEstado(bool estado);
 
     /**
