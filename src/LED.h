@@ -89,7 +89,7 @@ private:
     uint8_t getPino();
 
     /**
-     * @brief define o estado do LED.
+     * @brief define manualmente o estado do LED.
      * @param estado novo estado do LED (true para ligado, false para desligado).
      */
     void setEstado(bool estado);
