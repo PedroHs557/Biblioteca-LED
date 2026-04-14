@@ -104,6 +104,11 @@ private:
      * @brief atualiza o estado do led.
      */
     void update();
+
+    /**
+     * @brief reseta o estado do LED.
+     */
+    void reset();
 };
 
 #endif
